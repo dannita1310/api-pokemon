@@ -1,4 +1,5 @@
 import React from "react";
+
 const { useState } = React;
 
 const Searchbar = (props) => {
@@ -6,7 +7,7 @@ const Searchbar = (props) => {
   const [search, setSearch] = useState("");
 
   const onChange = (e) => {
-    setSearch(e.target.value);
+    setSearch(e.target.value.toLowerCase().trim);
     if (e.target.value.length === 0) {
       onSearch(null);
     }
