@@ -4,6 +4,7 @@ import Navbar from "../src/components/Nadvar";
 import Searchbar from "../src/components/Searchbar";
 import Pokedex from "../src/components/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "../src/api/api";
+import Swal from "sweetalert2";
 
 const { useState, useEffect } = React;
 

@@ -1,4 +1,3 @@
-
 const Pokemon = (props) => {
   const { pokemon } = props;
 
