@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import PokemonContext from "../context/PokemonContext";
 import { Loader } from "../../components/loader";
+import { PokemonContext } from "../../context/PokemonContext";
 
 export const PokemonPage = () => {
   const { getPokemonByID } = useContext(PokemonContext);

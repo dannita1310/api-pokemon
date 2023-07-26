@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Nadvar from "../components/Nadvar";
 import { PokemonPage } from "../pages/PokeCarpetas/PokemonPage";
 import Searchbar from "../components/Searchbar";
@@ -11,6 +11,8 @@ export const AppRouter = () => {
         <Route path="pokemon/:id" element={<PokemonPage />} />
         <Route path="search" element={<Searchbar />} />
       </Route>
+
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };
