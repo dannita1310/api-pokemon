@@ -2,9 +2,9 @@ import React from "react";
 import "./styles.css";
 import Navbar from "../src/components/Nadvar";
 import Searchbar from "../src/components/Searchbar";
-import Pokedex from "../src/components/Pokedex";
+import Pokedex from "./pages/PokeCarpetas/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "../src/api/api";
-import Swal from "sweetalert2";
+// import { AppRouter } from './routes/AppRouter';
 
 const { useState, useEffect } = React;
 
