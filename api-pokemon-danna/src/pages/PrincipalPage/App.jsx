@@ -1,10 +1,9 @@
 import React from "react";
-import "./styles.css";
-import Navbar from "../src/components/Nadvar";
-import Searchbar from "../src/components/Searchbar";
-import Pokedex from "./pages/PokeCarpetas/Pokedex";
-import { getPokemonData, getPokemons, searchPokemon } from "../src/api/api";
-// import { AppRouter } from './routes/AppRouter';
+import "../../styles.css";
+import Navbar from "../../components/Nadvar/Nadvar";
+import Searchbar from "../../components/SearchPokemon/Searchbar";
+import Pokedex from "../PokeCarpetas/Pokedex";
+import { getPokemonData, getPokemons, searchPokemon } from "../../api/api";
 
 const { useState, useEffect } = React;
 

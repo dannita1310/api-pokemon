@@ -1,15 +1,15 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Nadvar from "../components/Nadvar";
-import { PokemonPage } from "../pages/PokeCarpetas/PokemonPage";
-import Searchbar from "../components/Searchbar";
+import Layout from "../pages/Layout/layout";
+import { PokemonDetails } from "../pages/PokeCarpetas/PokemonDetails";
+import App from "../pages/PrincipalPage/App";
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Nadvar />}>
-        <Route path="pokemon/:id" element={<PokemonPage />} />
-        <Route path="search" element={<Searchbar />} />
+      <Route path="/" element={<Layout />}>
+        <Route path="" element={<App />}></Route>
+        <Route path=":id" element={<PokemonDetails />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/" />} />

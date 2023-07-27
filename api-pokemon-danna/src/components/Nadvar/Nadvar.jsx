@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "../../pages/Layout/layout";
 
 const Navbar = () => {
   let imgUrl =
@@ -9,6 +10,7 @@ const Navbar = () => {
       <div />
       <div>
         <img src={imgUrl} alt="pokemon-logo" className="navbar-image" />
+        <Layout />
       </div>
     </nav>
   );

@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Loader } from "../../components/loader";
-import { PokemonContext } from "../../context/PokemonContext";
+import { Loader } from "../../components/loader/loader";
+import { getPokemonByID } from "../../api/api";
 
-export const PokemonPage = () => {
-  const { getPokemonByID } = useContext(PokemonContext);
-
+export const PokemonDetails = () => {
   const [loading, setLoading] = useState(true);
   const [pokemon, setPokemon] = useState({});
 
   const { id } = useParams();
+
+  // let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
   const fetchPokemon = async (id) => {
     const data = await getPokemonByID(id);
@@ -51,7 +51,7 @@ export const PokemonPage = () => {
                 </div>
                 <div className="group-info">
                   <p>Peso</p>
-                  <span>{pokemon.weight}Kilogramos</span>
+                  <span>{pokemon.weight}KG</span>
                 </div>
               </div>
             </div>

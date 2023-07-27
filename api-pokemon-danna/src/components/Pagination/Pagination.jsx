@@ -1,5 +1,5 @@
 import React from "react";
-import { LeftArrow, RightArrow } from "./Arrowsvg";
+import { LeftArrow, RightArrow } from "../Arrowsvg/Arrowsvg";
 
 const Pagination = (props) => {
   const { onLeftClick, onRightClick, pagina, totalPages } = props;

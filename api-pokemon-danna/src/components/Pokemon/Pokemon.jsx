@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Pokemon = ({ pokemon }) => {
   return (
-    <Link to={`/pokemon/${pokemon.id}`} className="card-pokemon">
+    <Link to={`/${pokemon.id}`} className="card-pokemon">
       <div className="card-img">
         <img
           src={pokemon.sprites.other.dream_world.front_default}

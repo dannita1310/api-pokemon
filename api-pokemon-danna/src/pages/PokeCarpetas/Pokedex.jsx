@@ -1,6 +1,6 @@
 import React from "react";
-import Pagination from "../../components/Pagination";
-import { Pokemon } from "../../components/Pokemon";
+import Pagination from "../../components/Pagination/Pagination";
+import { Pokemon } from "../../components/Pokemon/Pokemon";
 
 const Pokedex = (props) => {
   const { pokemons, pagina, setPagina, total, loading } = props;
@@ -26,7 +26,7 @@ const Pokedex = (props) => {
           })}
           <div className="header">
             <Pagination
-              page={pagina + 1}
+              pagina={pagina + 1}
               totalPages={total}
               onLeftClick={lastPage}
               onRightClick={nextPage}

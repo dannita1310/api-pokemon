@@ -15,7 +15,7 @@ export const getPokemons = async (limit = 20, offset = 0) => {
     return data;
   } catch (err) {}
 };
-
+ 
 export const getPokemonData = async (url) => {
   try {
     const response = await fetch(url);
