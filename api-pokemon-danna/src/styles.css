@@ -48,7 +48,7 @@ nav {
 
 .searchbar-container {
   display: flex;
-  margin: 0px 10px;
+  margin: 20px 10px;
   padding: 0;
   align-items: center;
   flex: 1;
@@ -56,7 +56,7 @@ nav {
 }
 
 .searchbar {
-  background: rgb(0, 0, 0);
+  
   padding-right: 20px;
   color: white;
   flex: 1;
@@ -67,7 +67,6 @@ nav {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   border: none;
-  width: 100%;
 }
 
 .searchbar input:focus {
@@ -79,7 +78,7 @@ nav {
   border: none;
   border-radius: 10px;
   height: 100%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 10px 12px;
   margin-left: 20px;
 }
@@ -181,6 +180,7 @@ nav {
 
 .card-types {
   display: flex;
+  justify-content: center;
 }
 
 .card-types span {
@@ -206,7 +206,7 @@ nav {
   margin-top: 20px;
   color: #ffffff;
   text-shadow: rgb(148, 255, 255);
-  display: flex;
+  text-align: center;
   align-items: center;
 
   position: relative;
@@ -221,6 +221,14 @@ nav {
   font-size: 80px;
   font-weight: 700;
   color: var(--color-primary-hover);
+}
+
+.name-pokemon {
+  justify-content: center;
+  color: #ffffff;
+  text-shadow: rgb(148, 255, 255);
+  font-size: 50px;
+  font-weight: 300;
 }
 
 .container-img-pokemon {
@@ -250,10 +258,11 @@ nav {
 
 .info-pokemon {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: #ffffff;
   text-shadow: rgb(148, 255, 255);
   margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .group-info {

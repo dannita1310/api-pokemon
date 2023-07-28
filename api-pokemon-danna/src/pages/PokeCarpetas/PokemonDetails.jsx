@@ -28,6 +28,7 @@ export const PokemonDetails = () => {
       ) : (
         <>
           <div className="header-main-pokemon">
+            <div className="name-pokemon">{pokemon.name}</div>
             <span className="number-pokemon">#{pokemon.id}</span>
             <div className="container-img-pokemon">
               <img
