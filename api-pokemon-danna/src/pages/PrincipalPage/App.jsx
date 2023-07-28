@@ -4,6 +4,7 @@ import Navbar from "../../components/Nadvar/Nadvar";
 import Searchbar from "../../components/SearchPokemon/Searchbar";
 import Pokedex from "../PokeCarpetas/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "../../api/api";
+import Swal from "sweetalert2";
 
 const { useState, useEffect } = React;
 
@@ -46,6 +47,11 @@ export default function App() {
     const result = await searchPokemon(pokemon);
     if (!result) {
       setNotFound(true);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Pokemon no encontrado! Por favor verifique e intente de nuevo!",
+      });
       setLoading(false);
       return;
     } else {

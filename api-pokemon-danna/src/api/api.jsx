@@ -15,7 +15,7 @@ export const getPokemons = async (limit = 20, offset = 0) => {
     return data;
   } catch (err) {}
 };
- 
+
 export const getPokemonData = async (url) => {
   try {
     const response = await fetch(url);
@@ -30,4 +30,20 @@ export const getPokemonByID = async (id) => {
   const res = await fetch(`${baseURL}pokemon/${id}`);
   const data = await res.json();
   return data;
+};
+
+export const getEvolutionChain = async (pokemon) => {
+  try {
+    const pokemonData = await searchPokemon(pokemon);
+    const SpeciesUrl = pokemonData.species.url;
+
+    const specieresponse = await fetch(SpeciesUrl);
+    const speciedata = await specieresponse.json();
+
+    const evolutionchainresponse = await fetch(speciedata.evolution_chain.url);
+    const evolutiondata = await evolutionchainresponse.json();
+    return evolutiondata;
+  } catch (err) {
+    console.error("Error al obtener la cadena de evolución:", err);
+  }
 };

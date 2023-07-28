@@ -1,5 +1,6 @@
 import React from "react";
 import "./Searchbar.css";
+import Swal from "sweetalert2";
 const { useState } = React;
 
 const Searchbar = (props) => {
@@ -9,6 +10,11 @@ const Searchbar = (props) => {
   const onChange = (e) => {
     setSearch(e.target.value.toLowerCase().trim());
     if (e.target.value.length === 0) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Texto vacio! Ingrese un pokemon!",
+      });
       onSearch(null);
     }
   };
@@ -22,7 +28,7 @@ const Searchbar = (props) => {
       <div className="searchbar">
         <div class="input-container">
           <input
-           onChange={onChange}
+            onChange={onChange}
             type="text"
             name="text"
             class="input"
@@ -52,8 +58,6 @@ const Searchbar = (props) => {
             </g>
           </svg>
         </div>
-{/* 
-        <input placeholder="Buscar pokemon..." onChange={onChange} /> */}
       </div>
       <div className="searchbar-btn">
         <button class="btn" onClick={onClick}>
