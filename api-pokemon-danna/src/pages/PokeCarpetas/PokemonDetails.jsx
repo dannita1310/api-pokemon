@@ -26,13 +26,13 @@ export const PokemonDetails = () => {
     setevolutiondata(evolution);
     setPokemon(data);
     setLoading(false);
-
-    console.log(evolution);
   };
 
   useEffect(() => {
     fetchPokemonE(id);
   }, []);
+
+  console.log(pokemon.sprites.other.dream_world.front_default);
 
   return (
     <main className="container main-pokemon">
@@ -65,10 +65,6 @@ export const PokemonDetails = () => {
                 <div className="group-info">
                   <p>Peso</p>
                   <span>{pokemon.weight}KG</span>
-                </div>
-                <div className="evolutions">
-                  <p>Evolution</p>
-                  <span>{pokemon.evolutions_chain}</span>
                 </div>
               </div>
             </div>
@@ -131,6 +127,16 @@ export const PokemonDetails = () => {
                 </span>
               </div>
             </div>
+          </div>
+          <div className="evolutions">
+            <p>Evolution</p>
+            <span className="styles">{evolutiondata.chain?.species?.name}</span>
+            <span className="styles">
+              {evolutiondata.chain?.evolves_to[0]?.species?.name}
+            </span>
+            <span className="styles">
+              {evolutiondata.chain?.evolves_to[0]?.evolves_to[0]?.species?.name}
+            </span>
           </div>
         </>
       )}
