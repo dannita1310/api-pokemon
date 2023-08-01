@@ -78,18 +78,6 @@ nav {
   padding: 0px 10px 20px 10px;
 }
 
-@media screen and (max-width: 992px) {
-  .pokedex-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .pokedex-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 .pagination {
   display: flex;
   flex-direction: row;
@@ -127,7 +115,7 @@ nav {
 
 .card-pokemon {
   display: flex;
-  box-shadow: 4px 4px 4px rgb(148, 255, 255);
+  box-shadow: 4px 4px 4px 4px rgb(148, 255, 255);
   border-radius: 3px;
   color: white;
 }
@@ -175,7 +163,6 @@ nav {
   display: flex;
   flex-direction: column;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
   margin-top: 100px;
   margin-bottom: 50px;
 }
@@ -183,7 +170,7 @@ nav {
 .header-main-pokemon {
   margin-top: 20px;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
+
   text-align: center;
   align-items: center;
 
@@ -194,7 +181,6 @@ nav {
   position: absolute;
   top: -130px;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
   left: 0;
   font-size: 80px;
   font-weight: 700;
@@ -202,28 +188,47 @@ nav {
 }
 
 .evolutions {
+  margin-top: 100px;
+  display: flex;
   font-weight: 700;
   font-size: 20px;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
-.styles {
+.card-pokemon-evolution {
   display: flex;
-  order: 1;
-  flex: 2;
+  margin-top: 50px;
   padding: 5px 5px 5px 0;
   font-weight: 300;
   font-size: 20px;
-  color: aqua;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  flex-direction: row-reverse;
 }
 
 .name-pokemon {
   justify-content: center;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
   font-size: 50px;
   font-weight: 300;
+}
+
+
+.evolition-grid{
+display: flex;
+justify-content: space-around;
+}
+
+.txtEvo{
+  text-align: center;
+}
+
+.txtEstadistic{
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin-left: 8px;
 }
 
 .container-img-pokemon {
@@ -248,14 +253,12 @@ nav {
   text-align: right;
   font-size: 60px;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
 }
 
 .info-pokemon {
   display: flex;
   justify-content: space-evenly;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
   margin-top: 20px;
   margin-bottom: 25px;
 }
@@ -265,14 +268,12 @@ nav {
   flex-direction: column;
   gap: 10px;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
 }
 
 .group-info p {
   font-weight: 700;
   font-size: 20px;
   color: #ffffff;
-  text-shadow: rgb(148, 255, 255);
 }
 
 /* Stats */
@@ -306,5 +307,16 @@ nav {
   height: 30px;
   background-color: var(--color-primary);
   border-radius: 10px;
-  box-shadow: rgb(148, 255, 255);
+}
+
+@media screen and (max-width: 992px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

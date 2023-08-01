@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav>
       <div />
-      <div>
+      <div className="ImgNadvar">
         <img src={imgUrl} alt="pokemon-logo" className="navbar-image" />
         <Layout />
       </div>
