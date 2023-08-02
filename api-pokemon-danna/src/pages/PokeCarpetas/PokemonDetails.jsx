@@ -42,7 +42,7 @@ export const PokemonDetails = () => {
 
   useEffect(() => {
     fetchPokemonE(id);
-  }, []);
+  }, [id]);
 
   return (
     <main className="container main-pokemon">
