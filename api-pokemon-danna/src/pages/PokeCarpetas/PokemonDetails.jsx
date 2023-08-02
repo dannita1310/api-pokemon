@@ -141,6 +141,7 @@ export const PokemonDetails = () => {
           <div className="evolutions">
             <p className="txtEvo">Evolution</p>
             <Link to={`/${pokemon.id}`} className="card-pokemon-evolution">
+              {console.log(`/${pokemon.id}`)}
               <div className="evolition-grid">
                 {evolutiondata?.map((pokemon) => {
                   return <Pokemon pokemon={pokemon} key={pokemon.name} />;
