@@ -2,7 +2,7 @@ import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "../pages/Layout/layout";
 import { PokemonDetails } from "../pages/PokeCarpetas/PokemonDetails";
-import App from "../pages/PrincipalPage/App";
+import App from "../components/SearchPage/App";
 
 export const AppRouter = () => {
   return (

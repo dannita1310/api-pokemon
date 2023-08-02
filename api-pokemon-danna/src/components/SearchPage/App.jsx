@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles.css";
 import Navbar from "../../components/Nadvar/Nadvar";
 import Searchbar from "../../components/SearchPokemon/Searchbar";
-import Pokedex from "../PokeCarpetas/Pokedex";
+import Pokedex from "../../pages/PokeCarpetas/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "../../api/api";
 import Swal from "sweetalert2";
 
