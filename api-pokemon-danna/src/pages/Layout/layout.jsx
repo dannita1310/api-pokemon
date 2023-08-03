@@ -7,7 +7,7 @@ const layout = () => {
         <ol>
           <li>
             <Link to="/" home>
-              Home
+              home
             </Link>
           </li>
         </ol>

@@ -88,17 +88,13 @@ nav {
   font-family: sans-serif;
 }
 
-.icon {
-  width: 28px;
-  height: 28px;
-}
-
 .pagination-btn {
-  background-color: rgb(130, 247, 255);
+  background-color: rgb(124, 255, 255);
   border: none;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  position: relative;
+  width: 28px;
+  height: 28px;
   margin: 0px 8px;
   display: flex;
   align-items: center;
@@ -215,17 +211,16 @@ nav {
   font-weight: 300;
 }
 
-
-.evolition-grid{
-display: flex;
-justify-content: space-around;
+.evolition-grid {
+  display: flex;
+  justify-content: space-around;
 }
 
-.txtEvo{
+.txtEvo {
   text-align: center;
 }
 
-.txtEstadistic{
+.txtEstadistic {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   margin-left: 8px;
@@ -320,3 +315,5 @@ justify-content: space-around;
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+

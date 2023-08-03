@@ -1,24 +1,15 @@
 import React from "react";
-import { LeftArrow, RightArrow } from "../Arrowsvg/Arrowsvg";
 
 const Pagination = (props) => {
   const { onLeftClick, onRightClick, pagina, totalPages } = props;
 
   return (
     <div className="pagination">
-      <button className="pagination-btn" onClick={onLeftClick}>
-        <div className="icon">
-          <LeftArrow />
-        </div>
-      </button>
+      <button className="pagination-btn" onClick={onLeftClick}></button>
       <div>
         {pagina} de {totalPages}
       </div>
-      <button className="pagination-btn" onClick={onRightClick}>
-        <div className="icon">
-          <RightArrow />
-        </div>
-      </button>
+      <button className="pagination-btn" onClick={onRightClick}></button>
     </div>
   );
 };
